@@ -12,17 +12,17 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Home
  */
-@WebServlet("/Home")
+//@WebServlet("/Home")
 public class Home extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Home() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+//    public Home() {
+//        super();
+//        // TODO Auto-generated constructor stub
+//    }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -30,8 +30,13 @@ public class Home extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
-		PrintWriter out = response.getWriter();
-		out.write("<h1>Hello World!<h1>");
+//		PrintWriter out = response.getWriter();
+//		out.write("<h1>Hello World!<h1>");
+		// get the value for the query parameter
+        String userName = request.getParameter("name");
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        out.write("<h1>Hello World, from " + userName + "</h1>");
 	}
 
 	/**
