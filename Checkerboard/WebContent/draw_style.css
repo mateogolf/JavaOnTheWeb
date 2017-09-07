@@ -1,0 +1,15 @@
+@charset "ISO-8859-1";
+div.purple{
+    background-color: purple;
+    height: 50px;
+    width: 50px;
+}
+div.blue{
+    background-color: blue;
+    height: 50px;
+    width: 50px;
+}
+.row{
+	display:flex;
+	flex-direction: row;
+}
